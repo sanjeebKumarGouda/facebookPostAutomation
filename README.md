@@ -20,9 +20,9 @@
 14. **```pandas==1.2.0```**
 
 15. After above installation type **```spyder```** in Anaconda prompt. Now Spyder IDE will open in sometime.
-16. open **```script_final.py```** in spyder
+16. open **```script_final_v2.py```** in spyder
 Edit in Lines 28,40,48,66,68,145,149,174,175,180 in script.(change path of files used according to your local machine)
-17. When a new folder needs to be added we need to edit the ```script_final.py``` script. Steps for that
+17. When a new folder needs to be added we need to edit the ```script_final_v2.py``` script. Steps for that
 * When new folder for commodity “garlic” needs to be added inside vegetables then in script line-145 add ```{"vegetables_garlic_hindi" : "vegetables_garlic_hi", "vegetables_garlic_english":"vegetables_garlic_en"}```
 * When new folder for category “fruits” needs to be added then inside fruits folder “apple” needs to added then in script line-145 add ```{"fruits_apple_hindi" : "fruits_apple_hi", " fruits _apple_english":"fruits_apple_en"}``` These changes are case sensitive.
 
