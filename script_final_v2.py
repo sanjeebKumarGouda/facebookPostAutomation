@@ -6,14 +6,6 @@ Created on Mon Jun 28 19:36:15 2021
 """
 
 
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jun 26 13:43:12 2021
-
-@author: Sanjeeb
-"""
-
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -128,7 +120,10 @@ if __name__ == "__main__":
 
             # Create post
             try:
-                create_post = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Create a public post…')]")))
+                try:
+                    create_post = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Create a public post…')]")))                    
+                except:
+                    create_post = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '''//span[normalize-space()='Write something...']''')))
             except:
                 create_post = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '''//span[contains(text(),"What's on your mind, Sanjeeb?")]''')))
             create_post.click()
